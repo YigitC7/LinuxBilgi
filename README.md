@@ -14,6 +14,6 @@ This Program runs on GNU/Linux distributions It is a program that outputs inform
 </div>
 
 ## 1.0
-Start the makefile.sh file to install the program or run the full installation command 
+Start the makefile.sh file to install the program or run the full install command 
 # 
 ![image](image.png)
