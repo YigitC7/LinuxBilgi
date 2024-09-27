@@ -13,7 +13,7 @@ This Program runs on GNU/Linux distributions It is a program that outputs inform
   <pre><code>git clone https://github.com/YigitC7/LinuxBilgi && cd LinuxBilgi && sudo sh makefile.sh</code></pre>
 </div>
 
-## 1.0
+# Installation:
 Start the makefile.sh file to install the program or run the full install command 
 # 
 ![image](image.png)
