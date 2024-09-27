@@ -7,7 +7,7 @@ This Program runs on GNU/Linux distributions It is a program that outputs inform
   <pre><code>python3 python3-venv g++ gcc</code></pre>
 </div>
 
-### Install:
+### install:
 <div style="background-color:#000; color:#fff; padding:10px; border-radius:5px; position:relative;">
   <button style="position:absolute; top:5px; right:5px; background-color:#fff; border:none; color:#000; padding:5px 10px; border-radius:3px;" onclick="navigator.clipboard.writeText('git clone https://github.com/YigitC7/LinuxBilgi && cd LinuxBilgi && sudo sh makefile.sh')"></button>
   <pre><code>git clone https://github.com/YigitC7/LinuxBilgi && cd LinuxBilgi && sudo sh makefile.sh</code></pre>
