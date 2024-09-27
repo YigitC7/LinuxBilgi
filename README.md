@@ -1,6 +1,4 @@
-# LinuxBilgi
+# LinuxInfo
 
-Bu Program GNU/Linux dağıtımlarında çalışır
-GNU Linux dağıtımı hakkında bilgi çıktısı veren bir programdır
-Neofetch gibi ama farklı.
+This Program runs on GNU/Linux distributions It is a program that outputs information about the GNU Linux distribution. It's like Neofetch but different.
 
