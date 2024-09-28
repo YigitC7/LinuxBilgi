@@ -7,9 +7,10 @@ Lisans: GPL V3
 
 Tanımlı dağıtımlar:
 Arch Linux, Pardus, Ubuntu, Debian, Fedora, Kali Linux, Linux Mint,
-Red Hat, Zorin Os, MX Linux, Pisi Linux, Turkman Linux
+Red Hat, Zorin Os, MX Linux, Pisi Linux, Turkman Linux, Open Suse,
+Poppy Linux, Xubuntu
 
-13 Adet Linux dağıtımı tanınmaktadır.
+16 Adet Linux dağıtımı tanınmaktadır.
 Daha fazlası çok yakında...
 """
 
@@ -38,6 +39,7 @@ try:
 except:
     print("Hata: termcolor nodülü yüklü değil ---> pip install termcolor && pip install colored")
 
+
 try:
     system_info_distro_name = distro.name()
     system_info_linux_kernel_version = os.uname().release
@@ -49,12 +51,17 @@ try:
     system_info_user_name = os.getlogin()
     system_info_distro_codename = distro.codename()
     system_info_distro_V = distro.version()
+    system_info_shell = os.environ.get("SHELL")
+    system_info_shell_name = system_info_shell[9::]
 
     system_control_distro_id = distro.id()
+
+
+
 except:
     pass
 
-version = 1.0
+version = 1.1
 
 
 try:
@@ -232,6 +239,48 @@ ssssssssssssso/-`      `-/osssssssssssss
        (@@@@@@@@@&
 ""","blue")
 
+    ascii_opensuse = colored("""
+           .;ldkO0000Okdl;.
+       .;d00xl:^''''''^:ok00d;.
+     .d00l'                'o00d.
+   .d0Kd'  Okxol:;,.          :O0d.
+  .OKKKK0kOKKKKKKKKKKOxo:,      lKO.
+ ,0KKKKKKKKKKKKKKKK0P^,,,^dx:    ;00,
+.OKKKKKKKKKKKKKKKKk'.oOPPb.'0k.   cKO.
+:KKKKKKKKKKKKKKKKK: kKx..dd lKd   'OK:
+dKKKKKKKKKKKOx0KKKd ^0KKKO' kKKc   dKd
+dKKKKKKKKKKKK;.;oOKx,..^..;kKKK0.  dKd
+:KKKKKKKKKKKK0o;...^cdxxOK0O/^^'  .0K:
+ kKKKKKKKKKKKKKKK0x;,,......,;od  lKk
+ '0KKKKKKKKKKKKKKKKKKKKK00KKOo^  c00'
+  'kKKKOxddxkOO00000Okxoc;''   .dKk'
+    l0Ko.                    .c00l'
+     'l0Kk:.              .;xK0l'
+        'lkK0xl:;,,,,;:ldO0kl'
+            '^:ldxkkkkxdl:^'""","green")
+
+    ascii_xubuntu = colored("""
+           `.:/ossyyyysso/:.
+        `.yyyyyyyyyyyyyyyyyyyy.`
+      `yyyyyyyyyyyyyyyyyyyyyyyyyy`
+    `yyyyyyyyyyyyyyyyyyyy::yyyyyyyy`
+   .yyyyyyyyyyy/+:yyyyyyydsyyy+y}yyyy.
+  yyyyyyy:o/yydMMM+yyyyy/M+y:hM+yyyyyy
+ yyyyyyy+MMMyymMMMhyyyyyyM::mM+yyyyyyyy
+`yyyyyyy+MMMMysMMMdyyyyydh:mN+yyyyyyyyy`
+yyyyyyyy:NMMMMmMMMMmmdhyy+/y:yyyyyyyyyyy
+yyyyyyyy+MMMMMMMMMMMMMMMMMMNho:yyyyyyyyy
+yyyyyyyymMMMMMMMMMMMMMMMMMMMMMMyyyyyyyyy
+yyyyyyy+MMMMMMMMMMMMMMMMMMMMMMMM/yyyyyyy
+`yyyyyysMMMMMMMMMMMMMMMMMMMMMMmoyyyyyyy`
+ yyyyyyoMMMMMMMMMMMMMMMMMMMmy+yyyyyyyyy
+  yyyyy:mMMMMMMMMMMMMMMNho/yyyyyyyyyyy
+   .yyyy:yNMMMMMMMNdyo:yyyyyyyyyyyyy.
+    `yyyyyy:/++/::yyyyyyyyyyyyyyyyy`
+      `yyyyyyyyyyyyyyyyyyyyyyyyyy`
+        `.yyyyyyyyyyyyyyyyyyyy.`
+           `.:/oosyyyysso/:.`""","blue")
+
     ascii_windows = colored("""
                                 ..,
                     ....,,:;+ccllll
@@ -323,12 +372,33 @@ ascii_pisi = """
     `;=>>+``^llci/|==|/iclc;`'>>>>:
    `^`+~          ````          !!-^"""
 
+ascii_poppy = """
+           `-/osyyyysosyhhhhhyys+-
+  -ohmNNmh+/hMMMMMMMMNNNNd+dMMMMNM+
+ yMMMMNNmmddo/NMMMNNNNNNNNNo+NNNNNy
+.NNNNNNmmmddds:MMNNNNNNNNNNNh:mNNN/
+-NNNdyyyhdmmmd`dNNNNNmmmmNNmdd/os/
+.Nm+shddyooo+/smNNNNmmmmNh.   :mmd.
+ NNNNy:`   ./hmmmmmmmNNNN:     hNMh
+ NMN-    -++- +NNNNNNNNNNm+..-sMMMM-
+.MMo    oNNNNo hNNNNNNNNmhdNNNMMMMM+
+.MMs    /NNNN/ dNmhs+:-`  yMMMMMMMM+
+ mMM+     .. `sNN+.      hMMMMhhMMM-
+ +MMMmo:...:sNMMMMMms:` hMMMMm.hMMy
+  yMMMMMMMMMMMNdMMMMMM::/+o+//dMMd`
+   sMMMMMMMMMMN+:oyyo:sMMMNNMMMNy`
+    :mMMMMMMMMMMMmddNMMMMMMMMmh/
+      /dMMMMMMMMMMMMMMMMMMNdy/`
+        .+hNMMMMMMMMMNmdhs/.
+            .:/+ooo+/:-."""
+
 try:
     sys_info_show = f"""
 ==============================
 Dağıtım           : {system_info_distro_name} {system_info_mimari} {system_info_distro_codename} {system_info_distro_V}
 Çekirdek sürümü   : {system_info_kernel_name} {system_info_linux_kernel_version}
 Bilgisayar adı    : {system_info_machine_name}
+Kabuk             : {system_info_shell_name}
 Yerel ip adresi   : {system_info_local_ip}
 Kullanıcı adı     : {system_info_user_name}"""
 except:
@@ -388,6 +458,15 @@ def main():
 
     elif system_control_distro_id == "turkman":
         print(ascii_turkman)
+
+    elif system_control_distro_id == "opensuse-leap":
+        print(ascii_opensuse)
+
+    elif system_control_distro_id == "poppy":
+        print(ascii_poppy)
+
+    elif system_control_distro_id == "xubuntu":
+        print(ascii_xubuntu)
 
     else:
         print(ascii_linux)
