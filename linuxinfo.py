@@ -372,7 +372,7 @@ ascii_pisi = """
     `;=>>+``^llci/|==|/iclc;`'>>>>:
    `^`+~          ````          !!-^"""
 
-ascii_poppy = """
+ascii_puppy = """
            `-/osyyyysosyhhhhhyys+-
   -ohmNNmh+/hMMMMMMMMNNNNd+dMMMMNM+
  yMMMMNNmmddo/NMMMNNNNNNNNNo+NNNNNy
@@ -462,8 +462,8 @@ def main():
     elif system_control_distro_id == "opensuse-leap":
         print(ascii_opensuse)
 
-    elif system_control_distro_id == "poppy":
-        print(ascii_poppy)
+    elif system_control_distro_id == "puppy":
+        print(ascii_puppy)
 
     elif system_control_distro_id == "xubuntu":
         print(ascii_xubuntu)
