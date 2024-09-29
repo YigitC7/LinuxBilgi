@@ -52,7 +52,7 @@ try:
     system_info_distro_codename = distro.codename()
     system_info_distro_V = distro.version()
     system_info_shell = os.environ.get("SHELL")
-    system_info_shell_name = system_info_shell[9::]
+    system_info_shell_name = system_info_shell
 
     system_control_distro_id = distro.id()
 
@@ -421,8 +421,6 @@ def guc_tuketim_bilgisi():
             sys.exit()
 
 def main():
-    print(system_info_version)
-
     if system_control_distro_id== "arch":
         print(ascii_arch)
 
