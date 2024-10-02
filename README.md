@@ -14,7 +14,7 @@ This Program runs on GNU/Linux distributions It is a program that outputs inform
 </div>
 
 # Installation:
-Start the install.sh file to install the program or run the full install command 
+Start the install.sh file to install the program or run the full install command. If you have a problem with the installation, copy the commands in the install.sh file into the terminal.
 # 
 ![image2](image2.png)
 ![image](image.png)
