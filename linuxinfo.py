@@ -8,9 +8,9 @@ Lisans: GPL V3
 Tanımlı dağıtımlar:
 Arch Linux, Pardus, Ubuntu, Debian, Fedora, Kali Linux, Linux Mint,
 Red Hat, Zorin Os, MX Linux, Pisi Linux, Turkman Linux, Open Suse,
-Poppy Linux, Xubuntu
+Poppy Linux, Xubuntu, Manjaro 
 
-16 Adet Linux dağıtımı tanınmaktadır.
+17 Adet Linux dağıtımı tanınmaktadır.
 Daha fazlası çok yakında...
 """
 
@@ -40,6 +40,17 @@ except:
     print("Hata: termcolor nodülü yüklü değil ---> pip install termcolor && pip install colored")
 
 
+def get_ip_address():
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.settimeout(3)
+        s.connect(('8.8.8.8', 80))
+        ip_address = s.getsockname()[0]
+        s.close()
+        return ip_address
+    except socket.error:
+        return "Internet bağlı değil"
+
 try:
     system_info_distro_name = distro.name()
     system_info_linux_kernel_version = os.uname().release
@@ -47,7 +58,7 @@ try:
     system_info_version = os.uname().version
     system_info_machine_name = os.uname().nodename
     system_info_kernel_name = os.uname().sysname
-    system_info_local_ip = socket.gethostbyname(socket.gethostname())
+    system_info_local_ip = get_ip_address()
     system_info_user_name = os.getlogin()
     system_info_distro_codename = distro.codename()
     system_info_distro_V = distro.version()
@@ -61,7 +72,7 @@ try:
 except:
     pass
 
-version = 1.1
+version = 1.2
 
 
 try:
@@ -311,6 +322,22 @@ llllllllllllll  lllllllllllllllllll
        `' \\*::  :ccllllllllllllllll
                        ````''*::cll""","blue")
 
+    ascii_manjaro = colored("""
+██████████████████  ████████
+██████████████████  ████████
+██████████████████  ████████
+██████████████████  ████████
+████████            ████████
+████████  ████████  ████████
+████████  ████████  ████████
+████████  ████████  ████████
+████████  ████████  ████████
+████████  ████████  ████████
+████████  ████████  ████████
+████████  ████████  ████████
+████████  ████████  ████████
+████████  ████████  ████████""","green")
+
 except:
     pass
 
@@ -475,6 +502,9 @@ def main():
 
     elif system_control_distro_id == "xubuntu":
         print(ascii_xubuntu)
+
+    elif system_control_distro_id == "manjaro":
+        print(ascii_manjaro)
 
     else:
         print(ascii_linux)
